@@ -25,10 +25,10 @@ class Nav_buttom extends StatelessWidget {
       // },
        
         tabs: const [
-            
+          
           GButton(
             
-            
+          
             icon: Icons.home,
             text: 'shop',
             ),

@@ -11,9 +11,9 @@ class IntroPage extends StatelessWidget {
         
         children: [
          Padding(
-           padding: const EdgeInsets.all(25.0),
+           padding: const EdgeInsets.all(30.0),
           child: Image.network(
-            'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/2560px-Logo_NIKE.svg.png',width: 300,height: 200,),
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/2560px-Logo_NIKE.svg.png',width: 320,height: 200,),
          
 
          ),

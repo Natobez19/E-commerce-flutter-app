@@ -1,10 +1,12 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import 'package:nati/pages/navbar.dart';
 import 'package:nati/pages/cartpage.dart';
 import 'package:nati/pages/shoppage.dart';
+import 'package:nati/sign%20page/login.dart';
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -66,7 +68,7 @@ class _HomePageState extends State<HomePage> {
                   DrawerHeader(child:
                    Image.network('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/2560px-Logo_NIKE.svg.png',width: 150,height: 30,color: Colors.white,)),
                    Padding(
-                    padding:const EdgeInsets.symmetric(horizontal: 8.0),
+                    padding: EdgeInsets.symmetric(horizontal: 8.0),
                       child:   Divider(
                   color: Colors.grey,
                 ),
@@ -87,13 +89,23 @@ class _HomePageState extends State<HomePage> {
                      ),
                     ],
                   ),
+                  
                      
-                     const  Padding(
-                       padding: const EdgeInsets.only(left:25.0,bottom: 25),
+                      Padding(
+                       padding: EdgeInsets.only(left:25.0,bottom: 25),
+                       
                        child: ListTile(
+                        
+                        
                         leading: Icon(Icons.logout_outlined,color: Colors.white,),
+                        
                         title: Text('Log Out',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),),
+                       onTap: () {
+                         Navigator.push(context,MaterialPageRoute(builder: (context) => LogIn()));
+                       },
+                       
                        ),
+                       
                      ),
               
                 ],
