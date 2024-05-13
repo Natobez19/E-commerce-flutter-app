@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nati/pages/shoe.dart';
 import 'package:nati/pages/shoeTile.dart';
 
 
@@ -18,8 +19,8 @@ class _ShopPageState extends State<ShopPage> {
     return Column(
       children: [
         Container(
-          padding : EdgeInsets.all(15),
-          margin: EdgeInsets.symmetric(horizontal: 26),
+          padding : EdgeInsets.all(20),
+          margin: EdgeInsets.symmetric(horizontal: 30),
           decoration: BoxDecoration(
             color: Colors.grey,borderRadius: BorderRadius.circular(15),
             
@@ -57,8 +58,16 @@ class _ShopPageState extends State<ShopPage> {
          
          ),
         const SizedBox(height: 10,),
-        Expanded(child: ListView.builder(itemBuilder:(context , index) {
-       return ShoePage();
+        Expanded(
+          
+          child: ListView.builder(
+            itemCount: 4,
+            scrollDirection: Axis.horizontal,
+            itemBuilder:(context , index) {
+          Shoe shoe = Shoe(name: " Air jordan 1", price: "300", imagepath: "https://cdn-images.farfetch-contents.com/13/15/76/82/13157682_21516339_1000.jpg", , describtion: " this cool shoe");
+               return ShoeTile(
+                shoe: shoe,
+               );
         },
         ),
         ),

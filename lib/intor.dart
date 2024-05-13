@@ -6,7 +6,7 @@ class IntroPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("intro page"),),
+      appBar: AppBar(),
       body: Column(
         
         children: [
@@ -28,7 +28,7 @@ class IntroPage extends StatelessWidget {
            
          const SizedBox(height: 40),
 
-         Text("brand new senekers and showes",
+         Text("brand new senekers and shoes",
          style:
           TextStyle(
           fontWeight: FontWeight.bold,
